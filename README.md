@@ -1,5 +1,6 @@
 # Movies-Template
 This is a template for Movies, it can be used for something else.
+live server : https://hamzahdili2001.github.io/Movies-Template/home.html
 
 # Updates Needed :
  1. create login 
