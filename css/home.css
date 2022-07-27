@@ -1,0 +1,321 @@
+/* <!-- Start Home Section --> */
+section.home {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../images/home-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+section.home .prev,
+section.home .next {
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  z-index: 888;
+}
+section.home .prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.home .next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section.home .slide {
+  min-height: 90vh;
+  width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  overflow: hidden;
+}
+
+section.home .slide .movie {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.home .slide .movie .image {
+  width: 35%;
+}
+section.home .slide .movie .image img {
+  width: 100%;
+}
+
+section.home .slide .movie .description {
+  width: 590px;
+  margin-left: 65px;
+}
+
+section.home .slide .movie .description h1 {
+  color: #fff;
+  font-size: 3em;
+  line-height: 2;
+}
+
+section.home .slide .movie .description h3 {
+  color: var(--white-color);
+  line-height: 2;
+}
+
+section.home .slide .movie .description p {
+  color: #dddd;
+  line-height: 1.4;
+  font-size: 0.9em;
+  width: 400px;
+}
+
+section.home .slide .movie .description .tages {
+  margin-top: 30px;
+}
+
+section.home .slide .movie .description .tages a {
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 10px;
+}
+section.home .slide .movie {
+  display: none;
+}
+section.home .slide .movie.active {
+  display: flex;
+}
+
+section.home .slide .movie .description .tages a:not(:last-child) {
+  margin-right: 10px;
+}
+
+section.home .slide .movie .description .tages a:first-child {
+  background-color: #0082d8;
+}
+
+section.home .slide .movie .description .tages a:nth-child(2) {
+  background-color: #7000d8;
+}
+section.home .slide .movie .description .tages a:last-child {
+  background-color: #00bd94;
+}
+
+section.home .pagination {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.home .pagination ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.home .pagination ul li:not(:last-child) {
+  margin-right: 10px;
+}
+section.home .pagination ul li {
+  width: 30px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.589);
+}
+section.home .pagination ul li.active {
+  background-color: #fff;
+}
+@media (max-height: 584px) {
+  section.home {
+    height: 200vh;
+  }
+}
+
+@media (max-width: 992px) {
+  section.home .slide {
+    width: 600px;
+  }
+  section.home .slide .movie .image {
+    width: 30%;
+  }
+
+  section.home .slide .movie .description {
+    width: 70%;
+    margin-left: 20px;
+  }
+
+  section.home .slide .movie .description h1 {
+    font-size: 1.5em;
+    line-height: 1.8;
+  }
+
+  section.home .slide .movie .description h3 {
+    /* font: 0.8em; */
+    font-weight: lighter;
+  }
+
+  section.home .slide .movie .description p {
+    font-size: 0.8em;
+  }
+
+  section.home .slide .movie .description .tages {
+    margin-top: 20px;
+  }
+
+  section.home .slide .movie .description .tages a {
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.home .slide {
+    width: 100%;
+  }
+  section.home .slide .movie {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+  section.home .slide .movie .image {
+    width: 25%;
+  }
+
+  section.home .slide .movie .description {
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  section.home .slide .movie .description h1 {
+    font-size: 1.8em;
+    line-height: 1;
+  }
+
+  section.home .slide .movie .description h3 {
+    /* font: 0.8em; */
+    font-weight: lighter;
+  }
+
+  section.home .slide .movie .description p {
+    font-size: 0.8em;
+    width: auto;
+  }
+
+  section.home .slide .movie .description .tages {
+    margin-top: 20px;
+  }
+
+  section.home .slide .movie .description .tages a {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+}
+/* End Home Section */
+section.movies {
+  width: 100%;
+  position: relative;
+}
+section.movies .container .movies-list h1 {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  font-size: 2em;
+  color: #fff;
+  margin-left: 20px;
+}
+section.movies .container .movies-list .list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  row-gap: 20px;
+  background-color: var(--lessdarkerblue-color);
+  padding: 10px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+section.movies .container .movies-list .list::-webkit-scrollbar {
+  /* visibility: hidden; */
+  background: transparent;
+  height: 6px;
+  padding: 2px;
+  position: relative;
+}
+section.movies .container .movies-list .list::-webkit-scrollbar-track {
+  width: 100px;
+}
+section.movies .container .movies-list .list::-webkit-scrollbar-thumb {
+  background-color: #00bd94;
+}
+
+@media (max-width: 900px) {
+  section.movies .container .movies-list .list::-webkit-scrollbar {
+    display: none;
+  }
+}
+section.movies .arrow-btn {
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  z-index: 333;
+  font-size: 2em;
+  color: #00bd9493;
+  cursor: pointer;
+}
+section.movies .arrow-btn:hover {
+  color: #00bd94;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+section.movies .container .movies-list .list .movie {
+  width: 200px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px 0 20px 0;
+  flex: none;
+  margin-right: 20px;
+}
+section.movies .container .movies-list .list .movie::before {
+  content: "";
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 45px);
+  background-color: #2c3e5056;
+  transition: 0.3s;
+}
+section.movies .container .movies-list .list .movie:hover::before {
+  background-color: transparent;
+}
+
+section.movies .container .movies-list .list .movie h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 5px;
+  background-color: #0199ffe7;
+  text-align: center;
+  transition: 0.3s;
+}
+section.movies .container .movies-list .list .movie:hover h4 {
+  background-color: #0082d8;
+}
+section.movies .container .movies-list .list .movie h4 a {
+  color: rgba(255, 255, 255, 0.541);
+}
+section.movies .container .movies-list .list .movie h4 a:hover {
+  color: #fff;
+}
+

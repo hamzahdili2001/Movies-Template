@@ -1,0 +1,31 @@
+.error-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.error-container .box {
+  padding: 50px 60px;
+  background-color: var(--lessdarkerblue-color);
+}
+
+.error-container .box h1 {
+  font-size: 4rem;
+  color: var(--blue-color);
+}
+.error-container .box h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.error-container .box h5 {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
